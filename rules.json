@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Restrict-Access-To-Tenants",
+          "operation": "set",
+          "value": "contoso.com"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://login.microsoftonline.com/*",
+      "resourceTypes": ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"]
+    }
+  },
+    {
+    "id": 2,
+    "priority": 2,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Restrict-Access-To-Tenants",
+          "operation": "set",
+          "value": "contoso.com"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://login.microsoft.com/*",
+      "resourceTypes": ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"]
+    }
+  },
+    {
+    "id": 3,
+    "priority": 3,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Restrict-Access-To-Tenants",
+          "operation": "set",
+          "value": "contoso.com"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://login.windows.net/*",
+      "resourceTypes": ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 4,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "sec-Restrict-Tenant-Access-Policy",
+          "operation": "set",
+          "value": "restrict-msa"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://login.live.com/*",
+      "resourceTypes": ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"]
+    }
+  }
+]

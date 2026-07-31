@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "headerMod",
+  "version": "1.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://login.microsoftonline.com/*",
+    "*://login.microsoft.com/*",
+    "*://login.windows.net/*",
+    "*://login.live.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
